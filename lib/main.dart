@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'qr_code.dart';
 
 void main() => runApp(const MyApp());
 
@@ -27,11 +28,14 @@ class PreviewPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Widget Preview'),
       ),
-      body: Center(
-        // TODO: Replace Container with the widget
-        // that you would be building
-        child: Container(),
+      body: const Center(
+        // Add this QRCode widget in place of the Container
+        child: QRCode(
+          qrSize: 320,
+          qrData: 'https://flutterflow.io',
+        ),
       ),
     );
   }
 }
+
